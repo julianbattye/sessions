@@ -1,0 +1,24 @@
+---
+import Sidebar from "../components/Sidebar.astro";
+import Header from "../components/Header.astro";
+const { title } = Astro.props;
+---
+
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+  </head>
+  <body class="flex h-full">
+    <Sidebar />
+    <div class="w-full relative px-4 pt-14 sm:px-6 lg:px-8">
+      <Header />
+      <main class="flex py-16 min-h-full justify-center items-center">
+        <article class="prose dark:prose-invert">
+          <slot />
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
