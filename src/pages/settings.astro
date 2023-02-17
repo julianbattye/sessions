@@ -1,6 +1,7 @@
 ---
 // Component Imports
 import Button from "../components/Button.astro";
+import Cta from "../components/Cta";
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -12,16 +13,13 @@ import Button from "../components/Button.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Sessions</title>
+    <title>Settings</title>
   </head>
 
   <body>
     <div class="grid place-items-center h-screen content-center">
-      <Button>Tailwind Button in Astro!</Button>
-      <a href="/markdown-page" class="p-4 underline"
-        >Markdown is also supported...</a
-      >
-      <a href="/settings" class="p-4 underline">View settings page</a>
+      <h1>Settings</h1>
+      <a href="/" class="p-4 underline"> Back to home</a>
     </div>
   </body>
 </html>
