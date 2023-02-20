@@ -1,23 +1,7 @@
 ---
-// Component Imports
-
-// Full Astro Component Syntax:
-// https://docs.astro.build/core-concepts/astro-components/
+import Layout from "../layouts/sessionManager.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Settings</title>
-  </head>
-
-  <body>
-    <div class="grid place-items-center h-screen content-center">
-      <h1>Settings</h1>
-      <a href="/" class="p-4 underline"> Back to home</a>
-    </div>
-  </body>
-</html>
+<Layout title="Settings" navIndicator="settings">
+  <h1>Settings</h1>
+</Layout>
