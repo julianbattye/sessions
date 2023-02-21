@@ -1,7 +1,17 @@
 ---
-import Layout from "../layouts/sessionManager.astro";
+import SessionManager from "../layouts/sessionManager.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import Heading from "../components/Heading.astro";
+import AvatarSection from "../components/AvatarSection.astro";
+import DescriptionList from "../components/DescriptionList.astro";
 ---
 
-<Layout title="Settings" navIndicator="settings">
-  <h1>Settings</h1>
-</Layout>
+<SessionManager title="Settings" navIndicator="settings">
+  <Heading title="Settings" />
+  <SectionHeading
+    title="Payment provider"
+    description="This is your payment processing platform"
+  />
+  <AvatarSection title="Stripe" imageUrl="../stripe-avatar.png" />
+  <DescriptionList />
+</SessionManager>

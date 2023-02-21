@@ -14,8 +14,8 @@ const { title, navIndicator } = Astro.props;
     <Sidebar navIndicator={navIndicator} />
     <div class="w-full relative px-4 pt-14 sm:px-6 lg:px-8">
       <Header />
-      <main class="flex py-16 min-h-full justify-center items-center">
-        <article class="prose dark:prose-invert">
+      <main class="w-full flex py-16 min-h-full justify-center">
+        <article class="w-full max-w-5xl">
           <slot />
         </article>
       </main>
