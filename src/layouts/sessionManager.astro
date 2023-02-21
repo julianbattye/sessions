@@ -15,13 +15,13 @@ const { title, navIndicator, maximize } = Astro.props;
     <div
       class={maximize === true
         ? "w-full relative pt-14 h-full flex"
-        : "w-full relative px-4 pt-14 sm:px-6 lg:px-8"}
+        : "w-full relative pt-14 px-4 sm:px-6 lg:px-8"}
     >
       <Header />
       <main
         class={maximize === true
           ? "w-full flex min-h-full justify-center"
-          : "w-full flex py-16 min-h-full justify-center"}
+          : "w-full flex min-h-full justify-center py-16"}
       >
         <article class={maximize === true ? "w-full" : "w-full max-w-5xl"}>
           <slot />
