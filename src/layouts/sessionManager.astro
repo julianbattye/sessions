@@ -1,7 +1,7 @@
 ---
 import Sidebar from "../components/Sidebar.astro";
 import Header from "../components/Header.astro";
-const { title, navIndicator } = Astro.props;
+const { title, navIndicator, maximize } = Astro.props;
 ---
 
 <html class="h-full" lang="en">
@@ -12,10 +12,18 @@ const { title, navIndicator } = Astro.props;
   </head>
   <body class="flex h-full">
     <Sidebar navIndicator={navIndicator} />
-    <div class="w-full relative px-4 pt-14 sm:px-6 lg:px-8">
+    <div
+      class={maximize === true
+        ? "w-full relative pt-14 h-full flex"
+        : "w-full relative px-4 pt-14 sm:px-6 lg:px-8"}
+    >
       <Header />
-      <main class="w-full flex py-16 min-h-full justify-center">
-        <article class="w-full max-w-5xl">
+      <main
+        class={maximize === true
+          ? "w-full flex min-h-full justify-center"
+          : "w-full flex py-16 min-h-full justify-center"}
+      >
+        <article class={maximize === true ? "w-full" : "w-full max-w-5xl"}>
           <slot />
         </article>
       </main>
