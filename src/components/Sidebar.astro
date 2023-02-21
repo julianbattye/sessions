@@ -5,11 +5,11 @@ const { navIndicator } = Astro.props;
 const navClasses =
   "w-full text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md";
 const navClassesActive =
-  "w-full bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md";
+  "w-full bg-gray-100 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md cursor-pointer";
 const iconClasses =
   "text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6";
 const iconClassesActive =
-  "text-gray-900 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6";
+  "text-gray-900 group-hover:text-gray-900 mr-3 flex-shrink-0 h-6 w-6";
 ---
 
 <div class="hidden w-full md:flex md:w-72 xl:w-80">
@@ -21,7 +21,7 @@ const iconClassesActive =
     </div><div class="mt-5 flex flex-grow flex-col">
       <nav class="flex-1 space-y-1 px-4 pb-4">
         <a
-          href="../upcoming"
+          href={navIndicator === "upcoming" ? null : "../upcoming"}
           class={navIndicator === "upcoming" ? navClassesActive : navClasses}
         >
           <svg
@@ -43,7 +43,7 @@ const iconClassesActive =
           </svg>Upcoming</a
         >
         <a
-          href="../schedule"
+          href={navIndicator === "schedule" ? null : "../schedule"}
           class={navIndicator === "schedule" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ const iconClassesActive =
           >Schedule</a
         >
         <a
-          href="../members"
+          href={navIndicator === "members" ? null : "../members"}
           class={navIndicator === "members" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ const iconClassesActive =
           >Members</a
         >
         <a
-          href="../reports"
+          href={navIndicator === "reports" ? null : "../reports"}
           class={navIndicator === "reports" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const iconClassesActive =
       </nav>
       <div class="flex space-y-1 px-4 w-full pb-4">
         <a
-          href="../settings"
+          href={navIndicator === "settings" ? null : "../settings"}
           class={navIndicator === "settings" ? navClassesActive : navClasses}
         >
           <svg
