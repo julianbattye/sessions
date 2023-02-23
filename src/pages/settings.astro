@@ -4,6 +4,7 @@ import SectionHeading from "../components/SectionHeading.astro";
 import Heading from "../components/Heading.astro";
 import AvatarSection from "../components/AvatarSection.astro";
 import DescriptionList from "../components/DescriptionList.astro";
+import StripeLogo from "/stripe-avatar.png";
 ---
 
 <SessionManager title="Settings" navIndicator="settings">
@@ -17,6 +18,6 @@ import DescriptionList from "../components/DescriptionList.astro";
     title="Payment provider"
     description="This is your payment processing platform"
   />
-  <AvatarSection title="Stripe" imageUrl="stripe-avatar.png" />
+  <AvatarSection title="Stripe" imageUrl={StripeLogo} />
   <DescriptionList />
 </SessionManager>
