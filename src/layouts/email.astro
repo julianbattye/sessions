@@ -1,0 +1,20 @@
+---
+import SubjectLine from "../components/email/subject-line.astro";
+const { subject, title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col items-center">
+    <SubjectLine from="FitStop" subject={subject} />
+    <div class="px-4 mb-8 max-w-md w-full">
+      <slot />
+    </div>
+  </body>
+</html>
