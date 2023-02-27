@@ -1,8 +1,7 @@
 ---
 import Sidebar from "../components/Sidebar.astro";
 import Header from "../components/Header.astro";
-const { title, navIndicator, maximize } = Astro.props;
-import favicon from "/logo.svg";
+const { title, navIndicator, maximize, clientIcon } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -10,7 +9,11 @@ import favicon from "/logo.svg";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href={clientIcon ? "/sessions/logo.svg" : "/sessions/mark-sessions.svg"}
+    />
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <title>Manage - {title}</title>
   </head>

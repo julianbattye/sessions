@@ -3,12 +3,16 @@ import Layout from "../../layouts/email.astro";
 import Receipt from "../../components/email/email-receipt.astro";
 import Logo from "../../components/email/email-logo.astro";
 import Booking from "../../components/email/email-booking.astro";
-import Action from "../../components/email/email-action.astro";
 import Footer from "../../components/email/email-footer.astro";
 import Heading from "../../components/email/email-heading.astro";
 ---
 
-<Layout title="Session booked" subject="Session booked" activeTab="A">
+<Layout
+  title="Session booked"
+  subject="Session booked"
+  activeTab="A"
+  clientIcon
+>
   <Logo />
   <Heading title="Session booked" />
   <Booking onboarding />

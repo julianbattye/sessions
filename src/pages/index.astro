@@ -1,42 +1,24 @@
 ---
 // Component Imports
+import Layout from "../layouts/main.astro";
 import Button from "../components/Button.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/sessions/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Sessions</title>
-  </head>
-
-  <body>
-    <div class="grid place-items-center h-screen content-center p-8">
-      <img
-        class="h-16 w-16 mb-8"
-        src="/sessions/logo-sessions.svg"
-        alt="Sessions"
-      />
-      <a
-        href="./crm/schedule"
-        class="inline-flex items-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base text-center font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >Session Manager</a
-      >
-      <a
-        href="./email/booking-onboarding"
-        class="mt-4 inline-flex items-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base text-center font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >Emails</a
-      >
-      <Button>Launch confetti</Button>
-    </div>
-    <!-- Instant page -->
-    <script
-      src="//instant.page/5.1.1"
-      type="module"
-      integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"
-    ></script>
-  </body>
-</html>
+<Layout>
+  <img
+    class="h-16 w-16 mb-8"
+    src="/sessions/logo-sessions.svg"
+    alt="Sessions"
+  />
+  <a
+    href="./crm/schedule"
+    class="w-full max-w-md inline-flex items-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base text-center font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+    >Session Manager</a
+  >
+  <a
+    href="./email/booking-onboarding"
+    class="w-full max-w-md mt-4 inline-flex items-center rounded-md border border-gray-300 bg-white px-6 py-3 text-base text-center font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+    >Emails</a
+  >
+  <Button>Launch confetti</Button>
+</Layout>
