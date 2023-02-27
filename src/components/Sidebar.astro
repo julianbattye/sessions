@@ -2,8 +2,6 @@
 // Sidebar
 const { navIndicator } = Astro.props;
 
-import Logo from "/mark-sessions.svg";
-
 const navClasses =
   "w-full text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md";
 const navClassesActive =
@@ -18,11 +16,13 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
     class="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white pt-5"
   >
     <div class="flex flex-shrink-0 items-center px-4">
-      <a href="/"><img class="w-8 h-8" src={Logo} /></a>
+      <a href="/sessions/"
+        ><img class="w-8 h-8" src="/sessions/mark-sessions.svg" /></a
+      >
     </div><div class="mt-5 flex flex-grow flex-col">
       <nav class="flex-1 space-y-1 px-4 pb-4">
         <a
-          href={navIndicator === "upcoming" ? null : "/crm/upcoming"}
+          href={navIndicator === "upcoming" ? null : "/sessions/crm/upcoming/"}
           class={navIndicator === "upcoming" ? navClassesActive : navClasses}
         >
           <svg
@@ -44,9 +44,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           </svg>Upcoming</a
         >
         <a
-          href={navIndicator === "schedule"
-            ? null
-            : Astro.url.origin + "/crm/schedule"}
+          href={navIndicator === "schedule" ? null : "/sessions/crm/schedule/"}
           class={navIndicator === "schedule" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,9 +64,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           >Schedule</a
         >
         <a
-          href={navIndicator === "members"
-            ? null
-            : Astro.url.origin + "/crm/members"}
+          href={navIndicator === "members" ? null : "/sessions/crm/members/"}
           class={navIndicator === "members" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -86,9 +82,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           >Members</a
         >
         <a
-          href={navIndicator === "reports"
-            ? null
-            : Astro.url.origin + "/crm/reports"}
+          href={navIndicator === "reports" ? null : "/sessions/crm/reports/"}
           class={navIndicator === "reports" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -108,9 +102,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
       </nav>
       <div class="flex space-y-1 px-4 w-full pb-4">
         <a
-          href={navIndicator === "settings"
-            ? null
-            : Astro.url.origin + "/crm/settings"}
+          href={navIndicator === "settings" ? null : "/sessions/crm/settings/"}
           class={navIndicator === "settings" ? navClassesActive : navClasses}
         >
           <svg

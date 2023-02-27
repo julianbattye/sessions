@@ -9,19 +9,19 @@ const Current =
 
 <nav class="flex p-4 w-full max-w-lg border-b" aria-label="Tabs">
   <a
-    href={Astro.url.origin + "/email/booking-onboarding"}
+    href="/sessions/email/booking-onboarding"
     class={activeTab === "A" ? Current : Default}
   >
     Onboarding
   </a>
   <a
-    href={Astro.url.origin + "/email/booking-onboarding-alt"}
+    href="/sessions/email/booking-onboarding-alt"
     class={activeTab === "B" ? Current : Default}
   >
     Alt content
   </a>
   <a
-    href={Astro.url.origin + "/email/booking-normal"}
+    href="/sessions/email/booking-normal"
     class={activeTab === "C" ? Current : Default}
     aria-current="page"
   >

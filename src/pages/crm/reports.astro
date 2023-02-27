@@ -4,5 +4,25 @@ import Heading from "../../components/Heading.astro";
 ---
 
 <Layout title="Reports" navIndicator="reports">
-  <Heading title="Reports" />
+  <Heading title="Url notes" />
+  <p class="mt-10">
+    Astro.url <br />
+    <span class="text-2xl text-slate-400">{Astro.url}</span>
+  </p>
+  <p class="mt-10">
+    Astro.url.host <br />
+    <span class="text-2xl text-slate-400">{Astro.url.host}</span>
+  </p>
+  <p class="mt-10">
+    Astro.url.href <br />
+    <span class="text-2xl text-slate-400">{Astro.url.href}</span>
+  </p>
+  <p class="mt-10">
+    Astro.url.origin <br />
+    <span class="text-2xl text-slate-400">{Astro.url.origin}</span>
+  </p>
+  <p class="mt-10">
+    Astro.url.pathname <br />
+    <span class="text-2xl text-slate-400">{Astro.url.pathname}</span>
+  </p>
 </Layout>
