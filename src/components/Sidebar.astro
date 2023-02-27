@@ -18,11 +18,11 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
     class="flex flex-grow flex-col overflow-y-auto border-r border-gray-200 bg-white pt-5"
   >
     <div class="flex flex-shrink-0 items-center px-4">
-      <a href="../"><img class="w-8 h-8" src={Logo} /></a>
+      <a href="../../"><img class="w-8 h-8" src={Logo} /></a>
     </div><div class="mt-5 flex flex-grow flex-col">
       <nav class="flex-1 space-y-1 px-4 pb-4">
         <a
-          href={navIndicator === "upcoming" ? null : "../crm/upcoming"}
+          href={navIndicator === "upcoming" ? null : "../../crm/upcoming"}
           class={navIndicator === "upcoming" ? navClassesActive : navClasses}
         >
           <svg
@@ -44,7 +44,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           </svg>Upcoming</a
         >
         <a
-          href={navIndicator === "schedule" ? null : "../crm/schedule"}
+          href={navIndicator === "schedule" ? null : "../../crm/schedule"}
           class={navIndicator === "schedule" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +64,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           >Schedule</a
         >
         <a
-          href={navIndicator === "members" ? null : "../crm/members"}
+          href={navIndicator === "members" ? null : "../../crm/members"}
           class={navIndicator === "members" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +82,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
           >Members</a
         >
         <a
-          href={navIndicator === "reports" ? null : "../crm/reports"}
+          href={navIndicator === "reports" ? null : "../../crm/reports"}
           class={navIndicator === "reports" ? navClassesActive : navClasses}
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const iconClassesActive = "text-indigo-500 mr-3 flex-shrink-0 h-6 w-6";
       </nav>
       <div class="flex space-y-1 px-4 w-full pb-4">
         <a
-          href={navIndicator === "settings" ? null : "../crm/settings"}
+          href={navIndicator === "settings" ? null : "../../crm/settings"}
           class={navIndicator === "settings" ? navClassesActive : navClasses}
         >
           <svg
