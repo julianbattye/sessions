@@ -7,20 +7,24 @@ const Current =
   "bg-gray-100 text-gray-700 px-3 py-1 font-medium text-sm rounded-md";
 ---
 
-<nav class="flex p-4 w-full max-w-lg border-b justify-center" aria-label="Tabs">
+<nav class="flex p-4 w-full max-w-lg border-b" aria-label="Tabs">
   <a
-    href="../../email/booking-onboarding"
-    class={activeTab === "A" ? Current : Default}>Onboarding</a
+    href={Astro.url.origin + "/email/booking-onboarding"}
+    class={activeTab === "A" ? Current : Default}
   >
-
+    Onboarding
+  </a>
   <a
-    href="../../email/booking-onboarding-alt"
-    class={activeTab === "B" ? Current : Default}>Alt content</a
+    href={Astro.url.origin + "/email/booking-onboarding-alt"}
+    class={activeTab === "B" ? Current : Default}
   >
-
+    Alt content
+  </a>
   <a
-    href="../../email/booking-normal"
+    href={Astro.url.origin + "/email/booking-normal"}
     class={activeTab === "C" ? Current : Default}
-    aria-current="page">Normal</a
+    aria-current="page"
   >
+    Normal
+  </a>
 </nav>
