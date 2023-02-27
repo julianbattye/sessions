@@ -1,6 +1,7 @@
 ---
-import SubjectLine from "../components/email/subject-line.astro";
-const { subject, title } = Astro.props;
+import SubjectLine from "../components/email/email-subject-line.astro";
+import Tabs from "../components/email/email-tabs.astro";
+const { subject, title, activeTab } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -12,8 +13,9 @@ const { subject, title } = Astro.props;
     <title>{title}</title>
   </head>
   <body class="flex flex-col items-center">
+    <Tabs activeTab={activeTab} />
     <SubjectLine from="FitStop" subject={subject} />
-    <div class="px-4 mb-8 max-w-md w-full">
+    <div class="px-6 py-8 mb-8 max-w-lg w-full">
       <slot />
     </div>
   </body>

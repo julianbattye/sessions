@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/email.astro";
+import Receipt from "../components/email/email-receipt.astro";
+import Logo from "../components/email/email-logo.astro";
+import Booking from "../components/email/email-booking.astro";
+import Action from "../components/email/email-action.astro";
+import Footer from "../components/email/email-footer.astro";
+---
+
+<Layout title="Session booked" subject="Session booked" activeTab="B">
+  <Logo />
+  <Booking onboarding />
+  <div class="prose mt-8 px-4">
+    <p>
+      Welcome and thank you for booking your first session! We're thrilled to
+      have you on board and can't wait to help you achieve your fitness goals.
+    </p>
+
+    <p>
+      To ensure you have the best experience possible, please arrive at you're
+      scheduled session at earlier than usual in order to check-in, get settled,
+      and prepare for your workout.
+    </p>
+
+    <p>
+      We understand that starting a new fitness journey can be intimidating, but
+      we want to assure you that our team of experienced trainers is here to
+      support and guide you every step of the way. Don't hesitate to ask any
+      questions or seek assistance at any time.
+    </p>
+    <p>
+      Once again, thank you for choosing our gym. We look forward to seeing you
+      soon and helping you reach your full potential.
+    </p>
+  </div>
+
+  <Action url="/email-booking-onboarding" label="View your bookings" />
+  <Receipt />
+  <Footer />
+</Layout>

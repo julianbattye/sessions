@@ -1,9 +1,39 @@
 ---
 import Layout from "../layouts/email.astro";
-import Receipt from "../components/email/receipt.astro";
+import Receipt from "../components/email/email-receipt.astro";
+import Logo from "../components/email/email-logo.astro";
+import Booking from "../components/email/email-booking.astro";
+import Action from "../components/email/email-action.astro";
+import Footer from "../components/email/email-footer.astro";
 ---
 
-<Layout title="Session booked" subject="Session booked">
-  <p>Regular booking</p>
+<Layout title="Session booked" subject="Session booked" activeTab="A">
+  <Logo />
+  <Booking onboarding />
+
+  <div class="prose mt-8 px-4">
+    <p>
+      Congratulations, you are booked onto your first session! We know the first
+      step is the biggest and we are here to help you enjoy your first
+      experience with us.
+    </p>
+    <p>
+      Please bring any normal training essentials like water, small towel and
+      anything else to help your workout more enjoyable.
+    </p>
+    <p>
+      While it is your first time, please turn up with plenty of time to make
+      sure you're familiar with where we are - and pick your spot ready for the
+      session.
+    </p>
+    <p>
+      If you have any questions before your session, feel free to reach out to
+      us, and we will be happy to help with any questions.
+    </p>
+    <p>We look forward to meeting you at your first session!</p>
+  </div>
+
+  <Action url="/email-booking-onboarding-alt" label="View your bookings" />
   <Receipt />
+  <Footer />
 </Layout>
