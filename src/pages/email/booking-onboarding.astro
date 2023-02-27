@@ -5,12 +5,13 @@ import Logo from "../../components/email/email-logo.astro";
 import Booking from "../../components/email/email-booking.astro";
 import Action from "../../components/email/email-action.astro";
 import Footer from "../../components/email/email-footer.astro";
+import Heading from "../../components/email/email-heading.astro";
 ---
 
 <Layout title="Session booked" subject="Session booked" activeTab="A">
   <Logo />
+  <Heading title="Session booked" />
   <Booking onboarding />
-
   <div class="prose mt-8 px-4">
     <p>
       Congratulations, you are booked onto your first session! We know the first
@@ -33,7 +34,7 @@ import Footer from "../../components/email/email-footer.astro";
     <p>We look forward to meeting you at your first session!</p>
   </div>
 
-  <Action url="/schedule" label="View your bookings" />
+  <!-- <Action url="/schedule" label="View your bookings" /> -->
   <Receipt />
   <Footer />
 </Layout>
