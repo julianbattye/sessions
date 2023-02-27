@@ -1,10 +1,10 @@
 ---
-import Layout from "../layouts/email.astro";
-import Receipt from "../components/email/email-receipt.astro";
-import Logo from "../components/email/email-logo.astro";
-import Booking from "../components/email/email-booking.astro";
-import Action from "../components/email/email-action.astro";
-import Footer from "../components/email/email-footer.astro";
+import Layout from "../../layouts/email.astro";
+import Receipt from "../../components/email/email-receipt.astro";
+import Logo from "../../components/email/email-logo.astro";
+import Booking from "../../components/email/email-booking.astro";
+import Action from "../../components/email/email-action.astro";
+import Footer from "../../components/email/email-footer.astro";
 ---
 
 <Layout title="Session booked" subject="Session booked" activeTab="B">
@@ -34,7 +34,7 @@ import Footer from "../components/email/email-footer.astro";
     </p>
   </div>
 
-  <Action url="/email-booking-onboarding" label="View your bookings" />
+  <Action url="/schedule" label="View your bookings" />
   <Receipt />
   <Footer />
 </Layout>

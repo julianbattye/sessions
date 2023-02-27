@@ -1,16 +1,16 @@
 ---
-const { content } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{content.title}</title>
+    <title>{title}</title>
   </head>
-  <body>
+  <body class="flex w-full h-full justify-center items-center">
     <slot />
     <!-- Instant page -->
     <script
