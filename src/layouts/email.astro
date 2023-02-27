@@ -2,6 +2,7 @@
 import SubjectLine from "../components/email/email-subject-line.astro";
 import Tabs from "../components/email/email-tabs.astro";
 const { subject, title, activeTab } = Astro.props;
+import favicon from "/logo.svg";
 ---
 
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ const { subject, title, activeTab } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
   </head>
   <body class="flex flex-col items-center">

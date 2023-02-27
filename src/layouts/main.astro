@@ -1,5 +1,6 @@
 ---
 const { title } = Astro.props;
+import favicon from "/logo.svg";
 ---
 
 <!DOCTYPE html>
@@ -7,7 +8,7 @@ const { title } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>{title}</title>
   </head>
   <body class="flex w-full h-full justify-center items-center">

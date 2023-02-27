@@ -2,6 +2,7 @@
 import Sidebar from "../components/Sidebar.astro";
 import Header from "../components/Header.astro";
 const { title, navIndicator, maximize } = Astro.props;
+import favicon from "/logo.svg";
 ---
 
 <!DOCTYPE html>
@@ -9,6 +10,7 @@ const { title, navIndicator, maximize } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
     <title>Manage - {title}</title>
   </head>
   <body class="flex h-full">
