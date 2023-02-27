@@ -14,9 +14,6 @@ import favicon from "/logo.svg";
     <title>{title}</title>
   </head>
   <body class="flex flex-col items-center">
-    <h1>The current URL is: {Astro.url}</h1>
-    <h1>The current URL pathname is: {Astro.url.pathname}</h1>
-    <h1>The current URL origin is: {Astro.url.origin}</h1>
     <Tabs activeTab={activeTab} />
     <SubjectLine from="FitStop" subject={subject} />
     <div class="px-6 py-8 mb-8 max-w-lg w-full">
