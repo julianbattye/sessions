@@ -5,6 +5,5 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [mdx(), tailwind(), react()],
-  site: "https://julianbattye.co.uk",
-  base: "/sessions",
+  site: "https://julianbattye.co.uk/sessions",
 });
