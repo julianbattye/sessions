@@ -22,15 +22,15 @@ const { title, navIndicator, maximize, clientIcon } = Astro.props;
     <div
       class={maximize === true
         ? "w-full relative pt-14 h-full flex"
-        : "w-full relative pt-14 px-4 sm:px-6 lg:px-8"}
+        : "w-full relative pt-14 px-4 sm:px-6 lg:px-8 overflow-auto"}
     >
       <Header />
       <main
         class={maximize === true
           ? "w-full flex min-h-full justify-center"
-          : "w-full flex min-h-full justify-center py-16"}
+          : "w-full flex justify-center py-16 bg-white "}
       >
-        <article class={maximize === true ? "w-full" : "w-full max-w-5xl"}>
+        <article class={maximize === true ? "w-full" : "max-w-5xl"}>
           <slot />
         </article>
       </main>
