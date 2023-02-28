@@ -1,0 +1,57 @@
+---
+const { imageUrl, title } = Astro.props;
+---
+
+<div class="mt-4 sm:col-span-2 sm:mt-0">
+  <div class="space-y-4">
+    <div class="relative flex items-start">
+      <div class="w-full flex items-center justify-between">
+        <div class="flex items-center space-x-5">
+          <div class="flex-shrink-0">
+            <div class="relative">
+              <img class="h-12 w-12 rounded-full" src={imageUrl} alt={title} />
+              <span
+                class="absolute inset-0 rounded-full shadow-inner"
+                aria-hidden="true"></span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm font-medium text-gray-700">
+              {title}
+            </h3>
+            <span
+              class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-800"
+            >
+              Active
+            </span>
+          </div>
+        </div>
+        <div class="text-sm">
+          <button
+            type="button"
+            class="rounded-md bg-white font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+            >Disconnect</button
+          >
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-5 w-full rounded-lg bg-white text-sm leading-6 shadow ring-1 ring-slate-900/5"
+    >
+      <dl class="divide-y divide-gray-200">
+        <div class="p-3 sm:grid sm:grid-cols-2 sm:gap-4">
+          <dt class="text-sm text-gray-500">Stripe account name</dt>
+          <dd class="mt-1 flex text-sm text-gray-900 sm:col-span-1 sm:mt-0">
+            <span class="flex-grow">Fitway</span>
+          </dd>
+        </div>
+        <div class="p-3 sm:grid sm:grid-cols-2 sm:gap-4">
+          <dt class="text-sm text-gray-500">Account ID</dt>
+          <dd class="mt-1 flex text-sm text-gray-900 sm:col-span-1 sm:mt-0">
+            <span class="flex-grow">acct_1Ls1fSIrGBlV62TF</span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>

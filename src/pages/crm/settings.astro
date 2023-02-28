@@ -1,22 +1,48 @@
 ---
 import SessionManager from "../../layouts/sessionManager.astro";
-import SectionHeading from "../../components/SectionHeading.astro";
 import Heading from "../../components/Heading.astro";
-import AvatarSection from "../../components/AvatarSection.astro";
-import DescriptionList from "../../components/DescriptionList.astro";
+import ConnectionActive from "../../components/ConnectionActive.astro";
+import CompanyIcon from "../../components/CompanyIcon.astro";
+import Section from "../../components/Section.astro";
+import SubSection from "../../components/SubSection.astro";
 ---
 
 <SessionManager title="Settings" navIndicator="settings">
   <Heading title="Settings" />
-  <SectionHeading
+  <Section
     title="Branding"
-    description="Customise how your brand appears while using Sessions"
-  />
-  <p>This section is incomplete.</p>
-  <SectionHeading
-    title="Payment provider"
-    description="This is your payment processing platform"
-  />
-  <AvatarSection title="Stripe" imageUrl="/sessions/stripe-avatar.png" />
-  <DescriptionList />
+    description="Customise how your brand appears to customers."
+  >
+    <SubSection title="Company icon">
+      <CompanyIcon />
+    </SubSection>
+  </Section>
+  <Section
+    title="Payments"
+    description="How we'll handle payments on your site"
+  >
+    <SubSection title="Handler">
+      <ConnectionActive title="Stripe" imageUrl="/sessions/stripe-avatar.png" />
+    </SubSection>
+  </Section>
+  <Section title="Site settings">
+    <SubSection title="Disclaimer">
+      <div class="relative flex items-start">
+        <div class="flex h-5 items-center">
+          <input
+            id="comments"
+            name="comments"
+            type="checkbox"
+            checked
+            class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+          />
+        </div>
+        <div class="ml-3 text-sm">
+          <label for="comments" class="font-medium text-gray-700"
+            >Show the disclaimer</label
+          >
+        </div>
+      </div>
+    </SubSection>
+  </Section>
 </SessionManager>
