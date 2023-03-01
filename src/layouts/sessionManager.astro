@@ -30,7 +30,7 @@ const { title, navIndicator, maximize, clientIcon } = Astro.props;
           ? "w-full flex min-h-full justify-center"
           : "w-full flex justify-center pt-16 bg-white pb-24"}
       >
-        <article class={maximize === true ? "w-full" : "max-w-5xl"}>
+        <article class={maximize === true ? "w-full" : "max-w-4xl"}>
           <slot />
         </article>
       </main>
