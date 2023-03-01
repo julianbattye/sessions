@@ -9,22 +9,6 @@ import SubSection from "../../components/SubSection.astro";
 
 <SessionManager title="Settings" navIndicator="settings">
   <Heading title="Settings" />
-  <Section
-    title="Branding"
-    description="Customise how your brand appears to customers."
-  >
-    <SubSection title="Company icon">
-      <CompanyIcon />
-    </SubSection>
-  </Section>
-  <Section
-    title="Payments"
-    description="How we'll handle payments on your site"
-  >
-    <SubSection title="Handler">
-      <ConnectionActive title="Stripe" imageUrl="/sessions/stripe-avatar.png" />
-    </SubSection>
-  </Section>
   <Section title="Site settings">
     <SubSection title="Disclaimer">
       <div class="space-y-6">
@@ -66,9 +50,7 @@ import SubSection from "../../components/SubSection.astro";
               name="about"
               rows="3"
               class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-sky-500 focus:ring-sky-500 sm:text-sm"
-            >
-              Donec nec justo eget felis facilisis fermentum. Aliquam porttitor
-              mauris sit amet orci. Aenean dignissim pellentesque felis.
+              >Donec nec justo eget felis facilisis fermentum.
             </textarea>
           </div>
         </div>
@@ -120,6 +102,22 @@ import SubSection from "../../components/SubSection.astro";
           >Save</button
         >
       </div>
+    </SubSection>
+  </Section>
+  <Section
+    title="Branding"
+    description="Customise how your brand appears to customers."
+  >
+    <SubSection title="Company icon">
+      <CompanyIcon />
+    </SubSection>
+  </Section>
+  <Section
+    title="Payments"
+    description="How we'll handle payments on your site"
+  >
+    <SubSection title="Handler">
+      <ConnectionActive title="Stripe" imageUrl="/sessions/stripe-avatar.png" />
     </SubSection>
   </Section>
 </SessionManager>
