@@ -7,22 +7,27 @@ import Section from "../../components/Section.astro";
 import SubSection from "../../components/SubSection.astro";
 import SiteCode from "../../components/SiteCode.astro";
 import Disclaimer from "../../components/Disclaimer.astro";
+import Alert from "../../components/Alert.astro";
 ---
 
-<SessionManager title="Settings" navIndicator="settings">
+<SessionManager title="Settings" navIndicator="">
   <Heading title="Settings" />
+  <Alert
+    title="One or more settings are currently disabled"
+    description="Please contact your account manager to make adjustments"
+  />
   <Section
     title="Product area"
     description="Settings related to customer facing areas."
   >
     <SubSection title="Company icon">
-      <CompanyIcon />
+      <CompanyIcon disabled />
     </SubSection>
     <SubSection
       title="Disclaimer"
       description="The disclaimer area is shown on the account creation page. The user's answers are stored against their profile."
     >
-      <Disclaimer />
+      <Disclaimer disabled />
     </SubSection>
     <SubSection
       title="Bookings iFrame"
@@ -37,7 +42,11 @@ import Disclaimer from "../../components/Disclaimer.astro";
     description="How we'll handle payments on your site."
   >
     <SubSection title="Handler">
-      <ConnectionActive title="Stripe" imageUrl="/sessions/stripe-avatar.png" />
+      <ConnectionActive
+        disabled
+        title="Stripe"
+        imageUrl="/sessions/stripe-avatar.png"
+      />
     </SubSection>
   </Section>
 </SessionManager>
