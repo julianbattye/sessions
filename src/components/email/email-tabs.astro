@@ -13,7 +13,7 @@ const Current =
   <a href="/sessions/"
     ><img class="h-8 w-8" src="/sessions/logo-sessions.svg" /></a
   >
-  <nav class="py-4 w-full flex" aria-label="Tabs">
+  <nav class="py-4 w-full flex flex-wrap" aria-label="Tabs">
     <a
       href="/sessions/email/booking-onboarding"
       class={activeTab === "A" ? Current : Default}
@@ -32,6 +32,13 @@ const Current =
       aria-current="page"
     >
       Normal
+    </a>
+    <a
+      href="/sessions/email/booking-reminder"
+      class={activeTab === "D" ? Current : Default}
+      aria-current="page"
+    >
+      Reminder
     </a>
   </nav>
 </div>
