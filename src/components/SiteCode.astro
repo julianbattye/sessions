@@ -1,11 +1,14 @@
 ---
 const rawHTMLString = `<!--
 ** Developer notes **
-Do some magic to make the iFrame responsive and not have scrollbars etc.
+Something to tell the developer.
  -->
-<iframe src="https://sessionstest.thefitway.io/" title="Bookings">
-</iframe>
-<script>Run a script to and do some magic.</script>`;
+ <iframe
+  style="border: 0; width: 100%; min-height: 768px"
+  src="https://sessionsdev.thefitway.io/cus?gymId=421"
+  title="Bookings"
+>
+</iframe>`;
 ---
 
 <p class="font-normal">
@@ -20,9 +23,9 @@ Do some magic to make the iFrame responsive and not have scrollbars etc.
     class="whitespace-pre-wrap"><code class="text-xs">{rawHTMLString}</code>
 </pre>
 </div>
-<style>
-  iframe {
-    width: 1px;
-    min-width: 100%;
-  }
-</style>
+
+<button
+  type="button"
+  class="mt-8 rounded-md bg-white py-2 px-3 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+  >Copy to clipboard</button
+>
