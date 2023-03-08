@@ -1,0 +1,75 @@
+---
+const { id } = Astro.props;
+---
+
+<modal-right data-id={id}>
+  <div id={id + "_btn"}><slot /></div>
+  <div
+    id={id + "_overlay"}
+    class="z-30 fixed inset-0 bg-gray-500/0 transition-colors ease-in-out duration-500 invisible"
+  >
+  </div>
+  <div
+    id={id + "_modal"}
+    class="z-30 shadow-xl fixed h-full w-screen max-w-md top-0 right-0 z-40 bg-white p-8 text-black transition-transform ease-in-out duration-500 sm:duration-700 translate-x-full"
+  >
+    <div id={id + "_closeBtn"} class="flex h-7 items-center mb-8">
+      <button
+        type="button"
+        class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+      >
+        <span class="sr-only">Close panel</span>
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+    <slot name="contents" />
+  </div>
+</modal-right>
+
+<script lang="js">
+  class ModalRight extends HTMLElement {
+    constructor() {
+      super();
+      const id = this.dataset.id;
+      const action = document.getElementById(id + "_btn");
+      const modal = document.getElementById(id + "_modal");
+      const overlay = document.getElementById(id + "_overlay");
+      const close = document.getElementById(id + "_closeBtn");
+      action.addEventListener("click", () => {
+        modal.classList.remove("translate-x-full");
+        overlay.classList.remove("invisible");
+        overlay.classList.add("bg-gray-500/50");
+      });
+      close.addEventListener("click", () => {
+        modal.classList.add("translate-x-full");
+        modal.classList.add("shadow-none");
+        overlay.classList.remove("bg-gray-500/50");
+        setTimeout(function () {
+          overlay.classList.add("invisible");
+        }, 500);
+      });
+      overlay.addEventListener("click", () => {
+        modal.classList.add("translate-x-full");
+        modal.classList.add("shadow-none");
+        overlay.classList.remove("bg-gray-500/50");
+        setTimeout(function () {
+          overlay.classList.add("invisible");
+        }, 500);
+      });
+    }
+  }
+
+  customElements.define("modal-right", ModalRight);
+</script>

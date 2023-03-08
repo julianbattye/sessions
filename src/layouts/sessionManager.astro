@@ -22,7 +22,7 @@ const { title, navIndicator, maximize, clientIcon, header } = Astro.props;
     <div
       class={`w-full relative ${
         maximize ? "h-full flex" : "px-4 sm:px-6 lg:px-8 overflow-auto"
-      } ${header && " pt-14"}`}
+      } ${header ? " pt-14" : ""}`}
     >
       {header && <Header />}
       <main
