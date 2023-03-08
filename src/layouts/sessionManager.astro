@@ -1,7 +1,7 @@
 ---
 import Sidebar from "../components/Sidebar.astro";
 import Header from "../components/Header.astro";
-const { title, navIndicator, maximize, clientIcon } = Astro.props;
+const { title, navIndicator, maximize, clientIcon, header } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -20,17 +20,17 @@ const { title, navIndicator, maximize, clientIcon } = Astro.props;
   <body class="flex h-full">
     <Sidebar navIndicator={navIndicator} />
     <div
-      class={maximize === true
-        ? "w-full relative pt-14 h-full flex"
-        : "w-full relative pt-14 px-4 sm:px-6 lg:px-8 overflow-auto"}
+      class={`w-full relative ${
+        maximize ? "h-full flex" : "px-4 sm:px-6 lg:px-8 overflow-auto"
+      } ${header && " pt-14"}`}
     >
-      <Header />
+      {header && <Header />}
       <main
-        class={maximize === true
+        class={maximize
           ? "w-full flex min-h-full justify-center"
           : "w-full flex justify-center pt-16 bg-white pb-24"}
       >
-        <article class={maximize === true ? "w-full" : "max-w-4xl"}>
+        <article class={maximize ? "w-full" : "max-w-4xl"}>
           <slot />
         </article>
       </main>
