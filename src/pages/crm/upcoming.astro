@@ -1,8 +1,10 @@
 ---
 import Layout from "../../layouts/sessionManager.astro";
 import Heading from "../../components/Heading.astro";
+import RadioGroup from "../../components/molecules/RadioGroup.jsx";
 ---
 
 <Layout title="Upcoming" navIndicator="upcoming">
   <Heading title="Upcoming" />
+  <RadioGroup client:load />
 </Layout>

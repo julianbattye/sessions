@@ -431,20 +431,3 @@ import SessionDetails from "./SessionDetails.astro";
     </div>
   </div>
 </div>
-
-<script lang="js">
-  function docReady(fn) {
-    if (
-      document.readyState === "complete" ||
-      document.readyState === "interactive"
-    ) {
-      setTimeout(fn, 1);
-    } else {
-      document.addEventListener("DOMContentLoaded", fn);
-    }
-  }
-
-  docReady(function () {
-    window.scrollTo(400, 400);
-  });
-</script>
