@@ -1,6 +1,5 @@
 ---
 import AttendanceCheck from "./molecules/AttendanceCheck.astro";
-import AttendanceItem from "./molecules/AttendanceItem.astro";
 const { classTitle, date, time } = Astro.props;
 ---
 
@@ -10,30 +9,6 @@ const { classTitle, date, time } = Astro.props;
   <p class="text-gray-500 mt-2">{time}</p>
 </div>
 
-<!-- <div class="mt-8">
-  <h3 class="font-medium text-gray-900">Attendance</h3>
-  <ul role="list" class="divide-y divide-gray-200 border-gray-200">
-    <AttendanceItem name="Sarah Leem" initials="SL" DidNotAttend />
-    <AttendanceItem name="John Doe" initials="JD" attended />
-
-    <AttendanceItem name="James Pass" initials="JP" attended />
-    <AttendanceItem
-      name="Sarah Longestnameontwolines"
-      initials="SL"
-      DidNotAttend
-    />
-    <AttendanceItem
-      name="Aimee Douglas"
-      initials="AD"
-      imageUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
-    />
-    <AttendanceItem
-      name="Andrea McMillan"
-      initials="AM"
-      imageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixqx=oilqXxSqey&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=64&h=64&q=80"
-    />
-  </ul>
-</div> -->
 <div class="mt-8">
   <legend class="font-medium text-gray-900 text-sm mb-2">Attendance</legend>
   <div class="divide-y divide-gray-200 border-gray-200">

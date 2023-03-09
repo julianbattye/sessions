@@ -2,8 +2,8 @@
 const { id } = Astro.props;
 ---
 
-<modal-right data-id={id}>
-  <div id={id + "_btn"}><slot /></div>
+<modal-right class="flex w-full" data-id={id}>
+  <div class="w-full" id={id + "_btn"}><slot /></div>
   <div
     id={id + "_overlay"}
     class="z-30 fixed inset-0 bg-gray-500/0 transition-colors ease-in-out duration-500 invisible"
