@@ -1,16 +1,28 @@
 ---
+import AttendanceItem from "./molecules/attendanceItem.astro";
+const { classTitle, date, time } = Astro.props;
 ---
 
-<div class="flex flex-col gap-4">
-  <h3 class="text-2xl font-semibold text-gray-900">Spin Class</h3>
-  <p class="font-medium">6:00am - 7:00am</p>
-  <p>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-    Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse
-    urna nibh, viverra non, semper suscipit, posuere a, pede.
-  </p>
-  <p>
-    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit
-    amet orci. Aenean dignissim pellentesque felis.
-  </p>
+<div class="flex flex-col border-b pb-8">
+  <h3 class="text-2xl font-semibold text-gray-900 mb-4">{classTitle}</h3>
+  <p class="text-gray-500 text-sm">{date}</p>
+  <p class="text-gray-500 text-sm mt-2">{time}</p>
+</div>
+
+<div class="mt-8">
+  <h3 class="font-medium text-gray-900">Attendance</h3>
+  <ul role="list" class="divide-y divide-gray-200 border-gray-200">
+    <AttendanceItem
+      name="Aimee Douglas"
+      initials="AD"
+      imageUrl="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=64&h=64&q=80"
+    />
+    <AttendanceItem
+      name="Andrea McMillan"
+      initials="AM"
+      imageUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixqx=oilqXxSqey&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=64&h=64&q=80"
+    />
+    <AttendanceItem name="James Pass" initials="JP" />
+    <AttendanceItem name="Sarah Leem" initials="SL" />
+  </ul>
 </div>

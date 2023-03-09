@@ -358,7 +358,13 @@ import SessionDetails from "./SessionDetails.astro";
                     <time datetime="2022-01-12T06:00">6:00 AM</time>
                   </p>
                 </a>
-                <div slot="contents"><SessionDetails /></div>
+                <div slot="contents">
+                  <SessionDetails
+                    classTitle="Spin Class"
+                    time="6:00am - 7:00am"
+                    date="Wednesday, 12th February"
+                  />
+                </div>
               </ModalRight>
             </li>
             <li
@@ -425,3 +431,20 @@ import SessionDetails from "./SessionDetails.astro";
     </div>
   </div>
 </div>
+
+<script lang="js">
+  function docReady(fn) {
+    if (
+      document.readyState === "complete" ||
+      document.readyState === "interactive"
+    ) {
+      setTimeout(fn, 1);
+    } else {
+      document.addEventListener("DOMContentLoaded", fn);
+    }
+  }
+
+  docReady(function () {
+    window.scrollTo(400, 400);
+  });
+</script>

@@ -1,0 +1,73 @@
+---
+const { name, imageUrl, initials } = Astro.props;
+---
+
+<li class="flex items-center content-center justify-between py-3">
+  <div class="flex items-center">
+    {
+      imageUrl ? (
+        <img src={imageUrl} alt={name} class="h-8 w-8 rounded-full" />
+      ) : initials ? (
+        <span class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-violet-500">
+          <span class="text-sm font-medium leading-none text-white">
+            {initials}
+          </span>
+        </span>
+      ) : (
+        <span class="inline-block h-8 w-8 overflow-hidden rounded-full bg-gray-100">
+          <svg
+            class="h-full w-full text-gray-300"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+          </svg>
+        </span>
+      )
+    }
+
+    <p class="ml-4 text-sm font-medium text-gray-900">{name}</p>
+  </div>
+  <div>
+    <fieldset>
+      <legend class="sr-only">Choose an attendance option</legend>
+      <div class="flex">
+        <!--
+              In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+              Active: "ring-2 ring-indigo-600 ring-offset-2"
+              Checked: "bg-indigo-600 text-white hover:bg-indigo-500", Not Checked: "ring-1 ring-inset ring-gray-300 bg-white text-gray-900 hover:bg-gray-50"
+            -->
+        <label
+          class="flex items-center justify-center rounded-md py-3 px-3 text-sm font-semibold sm:flex-1 cursor-pointer focus:outline-none checked:bg-indigo-600 checked:text-white checked:hover:bg-indigo-500"
+        >
+          <input
+            type="radio"
+            name="attendance-option"
+            value="4 GB"
+            class="sr-only"
+            aria-labelledby="attendance-option-0-label"
+          />
+          <span id="attendance-option-0-label">Yes</span>
+        </label>
+
+        <!--
+              In Stock: "cursor-pointer", Out of Stock: "opacity-25 cursor-not-allowed"
+              Active: "ring-2 ring-indigo-600 ring-offset-2"
+              Checked: "bg-indigo-600 text-white hover:bg-indigo-500", Not Checked: "ring-1 ring-inset ring-gray-300 bg-white text-gray-900 hover:bg-gray-50"
+            -->
+        <label
+          class="flex items-center justify-center rounded-md py-3 px-3 text-sm font-semibold sm:flex-1 cursor-pointer focus:outline-none"
+        >
+          <input
+            type="radio"
+            name="attendance-option"
+            value="8 GB"
+            class="sr-only"
+            aria-labelledby="attendance-option-1-label"
+          />
+          <span id="attendance-option-1-label">No</span>
+        </label>
+      </div>
+    </fieldset>
+  </div>
+</li>
