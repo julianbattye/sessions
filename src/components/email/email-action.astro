@@ -1,5 +1,5 @@
 ---
-const { label = "Label", url = "url" } = Astro.props;
+const { label = "Do something", url = "#" } = Astro.props;
 ---
 
 <div class="mt-8 px-4 flex justify-center">
@@ -7,6 +7,7 @@ const { label = "Label", url = "url" } = Astro.props;
     href={url}
     type="button"
     class="text-center inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-    >{label}</a
   >
+    {label}
+  </a>
 </div>
