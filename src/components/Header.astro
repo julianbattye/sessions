@@ -1,3 +1,7 @@
+---
+import NavigationMenuMobile from "./NavigationMenuMobile";
+---
+
 <header
   class="w-full absolute inset-x-0 top-0 left-0 z-auto flex h-14 items-center justify-between gap-12 px-4 transition lg:px-8 backdrop-blur-sm border-b"
 >
@@ -7,7 +11,7 @@
   </div>
   <div class="flex items-center gap-5 w-full justify-between">
     <div class="flex items-center gap-5 md:hidden">
-      <a aria-label="Home" href="/">
+      <a aria-label="Home" href="/sessions/">
         <img class="h-8 w-8" src="/sessions/mark-sessions.svg" alt="Sessions" />
       </a>
     </div>
@@ -66,5 +70,6 @@
         alt="John Smith"
       />
     </div>
+    <!-- <NavigationMenuMobile client:load /> -->
   </div>
 </header>
