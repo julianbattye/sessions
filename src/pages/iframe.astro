@@ -1,3 +1,20 @@
+---
+const rawHTMLStringA = `
+<iframe
+style="border: 0; width: 100%; min-height: 768px"
+src="https://sessionsdev.thefitway.io/cus?mTs+WWfBiECkFjbZZqHRGxIWAk0johttuxTe567pQ4Y="
+title="Bookings"
+>
+</iframe>`;
+const rawHTMLStringB = `<!--
+  <iframe
+    style="border: 0; width: 100%; min-height: 768px"
+    src="https://sessionstest.thefitway.io/html/"
+    title="Bookings"
+>
+</iframe>`;
+---
+
 <!DOCTYPE html>
 <html class="h-full" lang="en">
   <head>
@@ -11,7 +28,7 @@
   <body class="bg-slate-200 flex py-16 px-8 flex-col w-full items-center">
     <div class="bg-slate-200 w-full h-full"></div>
     <div class="prose mb-16">
-      <h1 class="font-medium text-lg mb-4">Demo with iFrame</h1>
+      <h1>Demo with iFrame</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
         hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet
@@ -29,13 +46,18 @@
         Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
       </p>
     </div>
+    <div class="prose mt-16">
+      <h2>Example lifted from CRM</h2>
+      <pre
+        class="whitespace-pre-wrap mb-8"><code class="text-xs">{rawHTMLStringA}</code>
+      </pre>
+    </div>
     <iframe
       style="border: 0; width: 100%; min-height: 768px"
       src="https://sessionsdev.thefitway.io/cus?mTs+WWfBiECkFjbZZqHRGxIWAk0johttuxTe567pQ4Y="
       title="Bookings"
     >
     </iframe>
-
     <div class="prose mt-16">
       <p>
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus
@@ -54,5 +76,17 @@
         Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.
       </p>
     </div>
+    <div class="prose mt-16">
+      <h2>Example using https://sessionstest.thefitway.io/html/#/</h2>
+      <pre
+        class="whitespace-pre-wrap mb-8"><code class="text-xs">{rawHTMLStringB}</code>
+</pre>
+    </div>
+    <iframe
+      style="border: 0; width: 100%; min-height: 768px"
+      src="https://sessionstest.thefitway.io/html/#/"
+      title="Bookings"
+    >
+    </iframe>
   </body>
 </html>
